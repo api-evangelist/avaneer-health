@@ -1,23 +1,68 @@
 aid: avaneer-health
+
 name: Avaneer Health
-description: 'Avaneer Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Avaneer Health provides a real‑time healthcare revenue cycle management platform that connects payers and providers to deliver accurate insurance coverage information instantly. By simplifying data exchange, Avaneer improves outcomes, reduces claim errors, and accelerates care delivery across the healthcare ecosystem.'
+
 url: https://raw.githubusercontent.com/api-evangelist/avaneer-health/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Healthcare
+- Revenue Cycle
+- Interoperability
+- Real-time Data
+- API Platform
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Developer portal returns HTML shells for OpenAPI endpoints, no machine‑readable spec found.
+  evidence:
+    - url: https://developer.avaneerhealth.com/openapi.json
+      status: 200
+  checked: 2026-09-26
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://avaneerhealth.com/security/
+- type: Hosts
+  url: hosts/avaneer-health-hosts.yml
+- type: Vendors
+  url: vendors/avaneer-health-vendors.yml
+- type: Documentation
+  url: https://developer.avaneerhealth.com/
+- type: TrustCenter
+  url: security/avaneer-health-trust-center.yml
+- type: DomainSecurity
+  url: security/avaneer-health-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://avaneerhealth.com/
+- type: Blog
+  url: https://avaneerhealth.com/category/press/
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

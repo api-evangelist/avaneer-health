@@ -1,0 +1,15 @@
+generated: '2026-09-26'
+method: searched
+probe: true
+source: https://avaneerhealth.com/security/
+url: https://avaneerhealth.com/security/
+certifications:
+- SOC 2
+- HIPAA
+- GDPR
+evidence:
+- source: https://avaneerhealth.com/security/
+  keywords:
+  - soc2
+  - hipaa
+  - gdpr
