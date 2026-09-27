@@ -9,7 +9,7 @@ summary:
   platform: 0
   roles:
   - api
-  - portal
+  - docs
   - website
 hosts:
 - host: api.avaneerhealth.com
@@ -26,25 +26,30 @@ hosts:
   - probed
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
+  - Compliance
   - Website
-  - TermsOfService
-  - PrivacyPolicy
   - Blog
-  serves: []
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
   registrable_domain: avaneerhealth.com
   role: website
   relation: own
 - host: developer.avaneerhealth.com
   found_by:
+  - pointer
   - probed
   - site-links
   - docs-index
   - contract-discovery
   - well-known
-  types: []
+  types:
+  - Documentation
   serves:
   - docs
   registrable_domain: avaneerhealth.com
-  role: portal
+  role: docs
   relation: own
